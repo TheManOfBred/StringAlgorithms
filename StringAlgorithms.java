@@ -7,8 +7,12 @@ public class StringAlgorithms {
      */
     public static String printCharacters(String word) {
         // TODO: Implement this method
-        return "";
-    }
+        
+        for (int i = 0; i < word.length(); i++) {
+
+        }
+        return " ";
+}
 
 
     /**
@@ -18,7 +22,11 @@ public class StringAlgorithms {
      */
     public static String reverseWord(String word) {
         // TODO: Implement this method
-        return "";
+        String newWord = "";
+        for (int i = word.length()-1; i >= 0; i--) {
+          newWord = newWord + word.substring(i, i+1);
+        }
+        return newWord;
     }
 
 
@@ -70,7 +78,7 @@ public class StringAlgorithms {
 
         System.out.println("\nTesting reverseWord:");
         // Example:
-        // System.out.println(reverseWord("hello"));
+        System.out.println(reverseWord("hello"));
 
         System.out.println("\nTesting capitalizeString:");
         // Example:
