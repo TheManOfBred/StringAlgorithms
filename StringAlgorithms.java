@@ -7,11 +7,12 @@ public class StringAlgorithms {
      */
     public static String printCharacters(String word) {
         // TODO: Implement this method
-        
+        String full = "";
         for (int i = 0; i < word.length(); i++) {
-
+            full += word.substring(i, i+1);
+            full += "\n";
         }
-        return " ";
+        return full;
 }
 
 
@@ -98,7 +99,7 @@ public class StringAlgorithms {
         
         System.out.println("Testing printCharacters:");
         // Example:
-        // System.out.println(printCharacters("hello"));
+        System.out.println(printCharacters("hello"));
 
         System.out.println("\nTesting reverseWord:");
         // Example:
