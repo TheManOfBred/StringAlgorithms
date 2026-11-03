@@ -37,7 +37,20 @@ public class StringAlgorithms {
      */
     public static String capitalizeString(String sentence) {
         // TODO: Implement this method
-        return "";
+        String newString = "";
+        String thisChar = "";
+        for (int i = 0; i < sentence.length(); i++) {
+            if (sentence.substring(i, i+1) == " ") {
+               thisChar = sentence.substring(i+1, i+2);
+               thisChar = thisChar.toUpperCase();
+               newString = newString + thisChar;
+            } else {
+                        newString = newString + sentence.substring(i, i+1);
+
+            }
+            
+        }
+        return newString;
     }
 
 
@@ -48,7 +61,18 @@ public class StringAlgorithms {
      */
     public static boolean detectPalindrome(String word) {
         // TODO: Implement this method
-        return false;
+        boolean isPalindrome = false;
+        int begin = 0;
+        int end = word.length()-1;
+        while (begin <= end) {
+            if (word.substring(begin, begin+1) == word.substring(end, end+1)) {
+               isPalindrome = true;
+               
+            } 
+            begin++;
+            end--; 
+        }
+        return isPalindrome;
     }
 
 
@@ -82,11 +106,11 @@ public class StringAlgorithms {
 
         System.out.println("\nTesting capitalizeString:");
         // Example:
-        // System.out.println(capitalizeString("the quick brown fox"));
+        System.out.println(capitalizeString("the quick brown fox"));
 
         System.out.println("\nTesting detectPalindrome:");
         // Example:
-        // System.out.println(detectPalindrome("racecar"));
+        System.out.println(detectPalindrome("racecar"));
 
         System.out.println("\nTesting firstUniqueChar:");
         // Example:
